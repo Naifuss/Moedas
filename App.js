@@ -9,6 +9,7 @@ import {
   View,
 } from 'react-native';
 import {Picker} from '@react-native-picker/picker';
+import { styles } from './styles';
 
 export default function App() {
   const [moedaOrigem, setMoedaOrigem] = useState('BRL')
@@ -37,9 +38,9 @@ export default function App() {
   }
 
   return (
-    <View style={{ flex: 1, backgroundColor: "#1A6AF6", justifyContent: 'center', alignItems: 'center' }}>
+    <View style={{ flex: 1, backgroundColor: "#2874A6", justifyContent: 'center', alignItems: 'center' }}>
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={{ fontWeight: "bold", textAlign: 'center', alignSelf: 'center', fontSize : 35, backgroundColor: '#fff ' , paddingBottom:40,}}>Conversor de Moedas</Text>
+        <Text style={{ fontWeight: "bold", textAlign: 'center', alignSelf: 'center', fontSize: 35, paddingBottom: 40, color:'#FFFFFF'}}>Conversor de Moedas</Text>
         <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
           <Text style={{ color: '#FFFFFF', fontSize: 30, }}>Moeda 1:</Text>
           <View style={{ borderColor: '#FFFFFF', borderStyle:'solid', borderWidth: 1, borderRadius: 9 }}>
@@ -77,8 +78,8 @@ export default function App() {
           </View>
         </View>
         <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' }}>
-          <Pressable style={{ backgroundColor: '#f23132', width: 125, borderRadius: 20, marginTop: 20, height: 30, justifyContent: 'center', alignItems: 'center', textAlign: 'center' }} onPress={buscarHandle}><Text style={{ color: "#FFFFFF" }}>Buscar valor</Text></Pressable>
-          <Pressable style={{ backgroundColor: '#982131', width: 125, borderRadius: 20, marginTop: 20, height: 30, justifyContent: 'center', alignItems: 'center', textAlign: 'center' }} onPress={limparResultado}><Text style={{ color: "#FFFFFF" }}>Limpar valor</Text></Pressable>
+          <Pressable style={{ backgroundColor: '#1ABC9C', width: 125, borderRadius: 20, marginTop: 20, height: 30, justifyContent: 'center', alignItems: 'center', textAlign: 'center' }} onPress={buscarHandle}><Text style={{ color: "#FFFFFF" }}>Buscar valor</Text></Pressable>
+          <Pressable style={{ backgroundColor: '#1E8449', width: 125, borderRadius: 20, marginTop: 20, height: 30, justifyContent: 'center', alignItems: 'center', textAlign: 'center' }} onPress={limparResultado}><Text style={{ color: "#FFFFFF" }}>Limpar valor</Text></Pressable>
         </View>
         <Text style={{ textAlign: 'center', color: "#fff" } }>{`Resultado: ${valorConvertido}`} </Text>
         <StatusBar style="auto" />
